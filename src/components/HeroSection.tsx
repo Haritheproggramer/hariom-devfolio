@@ -79,9 +79,9 @@ export default function HeroSection({ dynamicLine }: HeroSectionProps) {
                 {profileData.initials}
               </div>
             )}
-            <div className="absolute inset-x-3 bottom-3 rounded-2xl border border-white/10 bg-slate-950/50 px-4 py-3 backdrop-blur-md">
-              <p className="text-xs uppercase tracking-[0.18em] text-brand-200">Profile Snapshot</p>
-              <p className="mt-1 text-sm text-slate-200">AI, web, and real-world problem solving</p>
+            <div className="absolute inset-x-3 bottom-3 rounded-2xl border border-white/10 bg-slate-950/50 px-4 py-3 text-center backdrop-blur-md">
+              <p className="text-xs uppercase tracking-[0.18em] text-brand-200">Hariom Jha</p>
+              <p className="mt-1 text-sm text-slate-200">Turning ideas into working tech</p>
             </div>
           </div>
         </Reveal>
