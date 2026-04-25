@@ -9,11 +9,11 @@ export default function AboutSection() {
         <SectionHeader
           eyebrow="About Me"
           title="Building with Curiosity and Purpose"
-          description="Hariom is a 2nd year Computer Science student focused on AI-based systems, web platforms, and practical problem solving."
+          description="I’m a 2nd year B.Tech CSE student at Manav Rachna University, passionate about building practical and scalable tech solutions."
         />
 
         <p className="mx-auto mb-8 max-w-3xl text-center text-slate-300">
-          Hariom builds scalable and practical tech solutions with a strong interest in AI-driven systems, interactive web products, and meaningful real-world outcomes. He enjoys hackathons, technical events, and shipping polished work that creates measurable impact.
+          I actively participate in hackathons and technical events, where I learn by building, collaborating, and improving my ideas into usable products.
         </p>
 
         <div className="grid gap-5 md:grid-cols-3">

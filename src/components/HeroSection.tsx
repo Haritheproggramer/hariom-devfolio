@@ -70,8 +70,8 @@ export default function HeroSection({ dynamicLine }: HeroSectionProps) {
             <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-brand-400/20 blur-3xl" />
             {profileData.profileImage ? (
               <img
-                src={profileData.profileImage}
-                alt={`${profileData.name} profile`}
+                src="/profile.jpg"
+                alt="Hariom Jha"
                 className="aspect-square w-full rounded-2xl object-cover"
               />
             ) : (

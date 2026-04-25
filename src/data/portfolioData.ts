@@ -62,13 +62,13 @@ export const profileData = {
   name: 'Hariom Jha',
   tagline: 'Aspiring Software Developer | Focused on AI, Web & Real-World Problem Solving',
   intro:
-    'Hariom is a 2nd year Computer Science student passionate about building scalable and practical tech solutions. He works on AI-based systems, web platforms, and real-world problem-solving projects. He actively participates in hackathons and technical events, focusing on innovation and impactful development.',
+    'I’m a 2nd year B.Tech CSE student at Manav Rachna University, passionate about building practical and scalable tech solutions. I enjoy working on AI-based systems, web platforms, and real-world problem-solving projects. I actively participate in hackathons and technical events, where I learn by building, collaborating, and improving my ideas into usable products.',
   rotatingLines: [
     'Building practical AI and web solutions.',
     'Turning ideas into deployable products.',
     'Focused on hackathons and real-world impact.',
   ],
-  resumeUrl: '/assets/Aarav-Sharma-Resume.pdf',
+  resumeUrl: '/assets/Hariom-Jha-Resume.pdf',
   email: 'jhahariom855@gmail.com',
   profileImage: '/profile.jpg',
   initials: 'HJ',
