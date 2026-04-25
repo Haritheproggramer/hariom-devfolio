@@ -94,6 +94,14 @@ export const aboutCards = [
 
 export const projects: Project[] = [
   {
+    title: 'AcadTrack',
+    category: 'Student Productivity App',
+    description:
+      'Modern Flutter + Supabase platform for task management, reminders, faculty notices, and progress tracking with RAG-based assistance; built in collaboration with my friend Ankita.',
+    techStack: ['Flutter', 'Dart', 'Supabase', 'Postgres', 'RAG'],
+    github: 'https://github.com/Haritheproggramer/AcadTrack',
+  },
+  {
     title: 'MudraSense',
     category: 'SIH Project',
     description:
@@ -191,7 +199,7 @@ export const socialLinks: SocialLink[] = [
 ]
 
 export const quickStats: QuickStat[] = [
-  { label: 'Projects', value: '4+' },
+  { label: 'Projects', value: '5+' },
   { label: 'Hackathon Finalist', value: 'Yes' },
   { label: 'Active Developer', value: 'Always' },
 ]
