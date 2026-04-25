@@ -97,7 +97,7 @@ export const projects: Project[] = [
     title: 'AcadTrack',
     category: 'Student Productivity App',
     description:
-      'Modern Flutter + Supabase platform for task management, reminders, faculty notices, and progress tracking with RAG-based assistance; built in collaboration with my friend Ankita.',
+      'Modern Flutter + Supabase platform for task management, reminders, faculty notices, and progress tracking with RAG-based assistance; built in collaboration with my friend.',
     techStack: ['Flutter', 'Dart', 'Supabase', 'Postgres', 'RAG'],
     github: 'https://github.com/Haritheproggramer/AcadTrack',
   },
