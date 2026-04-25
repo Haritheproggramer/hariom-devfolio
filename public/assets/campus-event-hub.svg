@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" fill="none">
+  <defs>
+    <linearGradient id="bg2" x1="100" y1="0" x2="1100" y2="720" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0B132B"/>
+      <stop offset="1" stop-color="#1E40AF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg2)"/>
+  <rect x="140" y="90" width="920" height="540" rx="34" fill="#020617" fill-opacity="0.82" stroke="#93C5FD" stroke-opacity="0.32"/>
+  <rect x="200" y="150" width="260" height="400" rx="20" fill="#111827" stroke="#3B82F6" stroke-opacity="0.35"/>
+  <rect x="500" y="150" width="500" height="110" rx="18" fill="#0F172A"/>
+  <rect x="500" y="285" width="500" height="110" rx="18" fill="#0F172A"/>
+  <rect x="500" y="420" width="500" height="110" rx="18" fill="#0F172A"/>
+  <circle cx="250" cy="205" r="20" fill="#60A5FA"/>
+  <circle cx="250" cy="285" r="20" fill="#60A5FA"/>
+  <circle cx="250" cy="365" r="20" fill="#60A5FA"/>
+  <circle cx="250" cy="445" r="20" fill="#60A5FA"/>
+  <text x="200" y="590" fill="#BFDBFE" font-family="Sora, sans-serif" font-size="44" font-weight="700">Campus Event Hub</text>
+  <text x="202" y="622" fill="#93C5FD" font-family="Sora, sans-serif" font-size="22">Discover and register for university events</text>
+</svg>

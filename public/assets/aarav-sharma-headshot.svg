@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" fill="none">
+  <defs>
+    <radialGradient id="bg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(420 350) rotate(70) scale(980)">
+      <stop offset="0" stop-color="#1D4ED8" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#020617"/>
+    </radialGradient>
+    <linearGradient id="shirt" x1="410" y1="760" x2="790" y2="1080" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#1E3A8A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1200" rx="0" fill="url(#bg)"/>
+  <circle cx="980" cy="220" r="160" fill="#93C5FD" fill-opacity="0.18"/>
+  <circle cx="240" cy="980" r="220" fill="#60A5FA" fill-opacity="0.12"/>
+  <rect x="210" y="150" width="780" height="900" rx="48" fill="#0B1224" fill-opacity="0.72" stroke="#93C5FD" stroke-opacity="0.22"/>
+  <ellipse cx="600" cy="470" rx="220" ry="250" fill="#F8D5C2"/>
+  <path d="M432 430C455 305 524 250 600 250C676 250 746 305 768 430C724 470 666 495 600 495C534 495 476 470 432 430Z" fill="#1F2937"/>
+  <path d="M430 730C470 642 535 598 600 598C665 598 730 642 770 730V980H430V730Z" fill="url(#shirt)"/>
+  <path d="M492 470C510 490 531 500 600 500C669 500 690 490 708 470" stroke="#B45309" stroke-opacity="0.7" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="520" cy="460" r="14" fill="#111827"/>
+  <circle cx="680" cy="460" r="14" fill="#111827"/>
+  <path d="M548 528C575 548 625 548 652 528" stroke="#9A3412" stroke-width="10" stroke-linecap="round"/>
+  <path d="M500 392C533 374 569 366 600 366C631 366 667 374 700 392" stroke="#111827" stroke-width="18" stroke-linecap="round"/>
+  <path d="M405 986C430 848 508 790 600 790C692 790 770 848 795 986" fill="#020617" fill-opacity="0.55"/>
+  <text x="600" y="1090" text-anchor="middle" fill="#BFDBFE" font-family="Space Grotesk, sans-serif" font-size="44" font-weight="700">Aarav Sharma</text>
+</svg>

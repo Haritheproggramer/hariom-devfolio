@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" fill="none">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1200" y2="720" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0A0F1E"/>
+      <stop offset="1" stop-color="#1E3A8A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg3)"/>
+  <rect x="180" y="100" width="840" height="520" rx="28" fill="#020617" fill-opacity="0.78" stroke="#60A5FA" stroke-opacity="0.35"/>
+  <rect x="240" y="170" width="300" height="360" rx="20" fill="#111827"/>
+  <rect x="580" y="170" width="380" height="120" rx="20" fill="#0F172A"/>
+  <rect x="580" y="310" width="380" height="100" rx="20" fill="#0F172A"/>
+  <rect x="580" y="430" width="380" height="100" rx="20" fill="#0F172A"/>
+  <path d="M390 230C426 230 456 200 456 164C456 128 426 98 390 98C354 98 324 128 324 164C324 200 354 230 390 230ZM336 260H444C482 260 514 292 514 330V400H266V330C266 292 298 260 336 260Z" fill="#3B82F6" fill-opacity="0.8"/>
+  <text x="240" y="590" fill="#BFDBFE" font-family="Sora, sans-serif" font-size="44" font-weight="700">Secure Voting System</text>
+  <text x="242" y="622" fill="#93C5FD" font-family="Sora, sans-serif" font-size="22">End-to-end encrypted digital ballot platform</text>
+</svg>

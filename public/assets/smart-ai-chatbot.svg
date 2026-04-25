@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" fill="none">
+  <defs>
+    <linearGradient id="bg1" x1="0" y1="0" x2="1200" y2="720" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0B1224"/>
+      <stop offset="1" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="card1" x1="220" y1="120" x2="980" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0F172A" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#020617" stop-opacity="0.95"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg1)"/>
+  <circle cx="1050" cy="110" r="180" fill="#93C5FD" fill-opacity="0.2"/>
+  <circle cx="170" cy="620" r="220" fill="#60A5FA" fill-opacity="0.15"/>
+  <rect x="220" y="120" width="760" height="480" rx="28" fill="url(#card1)" stroke="#93C5FD" stroke-opacity="0.35"/>
+  <rect x="280" y="190" width="280" height="24" rx="12" fill="#1E3A8A"/>
+  <rect x="280" y="230" width="520" height="14" rx="7" fill="#334155"/>
+  <rect x="280" y="255" width="450" height="14" rx="7" fill="#334155"/>
+  <rect x="280" y="320" width="300" height="180" rx="18" fill="#0B1224" stroke="#3B82F6" stroke-opacity="0.35"/>
+  <rect x="620" y="320" width="300" height="80" rx="18" fill="#0B1224" stroke="#3B82F6" stroke-opacity="0.35"/>
+  <rect x="620" y="420" width="300" height="80" rx="18" fill="#0B1224" stroke="#3B82F6" stroke-opacity="0.35"/>
+  <text x="280" y="560" fill="#BFDBFE" font-family="Sora, sans-serif" font-size="44" font-weight="700">Smart AI Chatbot</text>
+  <text x="282" y="592" fill="#93C5FD" font-family="Sora, sans-serif" font-size="22">NLP Support Automation Dashboard</text>
+</svg>
