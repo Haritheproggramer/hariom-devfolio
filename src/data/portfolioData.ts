@@ -100,6 +100,7 @@ export const projects: Project[] = [
     description:
       'AI-based system for real-time recognition of Bharatiya Natya mudras using computer vision.',
     techStack: ['Python', 'YOLO', 'OpenCV'],
+    github: 'https://github.com/ashwinsinghtanwar/mudrasense',
     featured: true,
   },
   {
@@ -127,6 +128,7 @@ export const projects: Project[] = [
     description:
       'Machine learning project to predict bike rental demand using data preprocessing, regression models, and model comparison.',
     techStack: ['Python', 'Pandas', 'Scikit-learn', 'Machine Learning', 'Streamlit'],
+    github: 'https://github.com/Haritheproggramer/yulu-demand-predictor',
     liveDemo: 'https://web-jqfkhc1g7-jhahariom855-9511s-projects.vercel.app/',
     featured: true,
   },
@@ -135,6 +137,7 @@ export const projects: Project[] = [
     category: 'Campus SaaS Platform',
     description:
       'AI-powered campus platform that centralizes announcements, timetables, tasks, events, and student updates in one smart dashboard.',
+    github: 'https://github.com/Haritheproggramer/CampusConnect',
     liveDemo: 'https://scrollslock-web.vercel.app/#/onboarding',
     techStack: ['React', 'Firebase', 'AI Tools', 'Vercel'],
   },
@@ -152,6 +155,7 @@ export const projects: Project[] = [
     description:
       'Smart medication reminder system with notifications, tracking, and a user-friendly interface.',
     techStack: ['Flutter', 'Firebase'],
+    github: 'https://github.com/Haritheproggramer/MEDICLOCK',
     liveDemo: 'https://freshalertflutterapp.vercel.app/',
   },
   {
@@ -160,6 +164,7 @@ export const projects: Project[] = [
     description:
       'Python-based mini game arcade including Snake, Pong, and Tic-Tac-Toe with GUI and CLI versions.',
     techStack: ['Python', 'Tkinter'],
+    github: 'https://github.com/Haritheproggramer/Gaming-Arena-Of-HJ',
   },
 ]
 
@@ -187,7 +192,19 @@ export const academics: AcademicItem[] = [
     degree: 'B.Tech in Computer Science Engineering',
     institution: 'Manav Rachna University, Faridabad',
     year: '2024 - 2028',
-    focus: 'Focused on software engineering, AI systems, and product-oriented project development.',
+    focus: 'CGPA: 6.69 | Focused on software engineering, AI systems, and product-oriented project development.',
+  },
+  {
+    degree: 'Class XII',
+    institution: 'G.B.S.S.S New Delhi-110080',
+    year: '2023 - 2024',
+    focus: '70% | PCM Stream',
+  },
+  {
+    degree: 'Class X',
+    institution: 'G.B.S.S.S New Delhi-110080',
+    year: '2021 - 2022',
+    focus: '82% | Foundation for engineering studies',
   },
 ]
 
