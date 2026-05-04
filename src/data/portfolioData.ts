@@ -118,6 +118,7 @@ export const projects: Project[] = [
       'Modern Flutter + Supabase platform for student task management, reminders, faculty notices, document handling, and progress tracking.',
     techStack: ['Flutter', 'Dart', 'Supabase', 'Postgres'],
     github: 'https://github.com/Haritheproggramer/AcadTrack',
+    liveDemo: 'https://acadtrack-tau.vercel.app/#/login',
     featured: true,
   },
   {
@@ -126,6 +127,7 @@ export const projects: Project[] = [
     description:
       'Machine learning project to predict bike rental demand using data preprocessing, regression models, and model comparison.',
     techStack: ['Python', 'Pandas', 'Scikit-learn', 'Machine Learning', 'Streamlit'],
+    liveDemo: 'https://web-jqfkhc1g7-jhahariom855-9511s-projects.vercel.app/',
     featured: true,
   },
   {
@@ -133,6 +135,7 @@ export const projects: Project[] = [
     category: 'Campus SaaS Platform',
     description:
       'AI-powered campus platform that centralizes announcements, timetables, tasks, events, and student updates in one smart dashboard.',
+    liveDemo: 'https://scrollslock-web.vercel.app/#/onboarding',
     techStack: ['React', 'Firebase', 'AI Tools', 'Vercel'],
   },
   {
@@ -140,6 +143,7 @@ export const projects: Project[] = [
     category: 'Security / Hackathon Project',
     description:
       'Secure digital voting framework focused on end-to-end encryption, kiosk-based inclusivity, and transparent audit workflow.',
+    liveDemo: 'https://web-bay-alpha-51.vercel.app/',
     techStack: ['React', 'Cryptography', 'Firebase', 'Security Concepts'],
   },
   {
@@ -148,6 +152,7 @@ export const projects: Project[] = [
     description:
       'Smart medication reminder system with notifications, tracking, and a user-friendly interface.',
     techStack: ['Flutter', 'Firebase'],
+    liveDemo: 'https://freshalertflutterapp.vercel.app/',
   },
   {
     title: 'Gaming Arena',
