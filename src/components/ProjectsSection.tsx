@@ -59,19 +59,9 @@ function renderTech(tech: string) {
   )
 }
 
-function hasDirectRepoLink(url?: string) {
-  if (!url) {
-    return false
-  }
-
-  const parts = url.replace(/\/$/, '').split('/')
-  return parts.length >= 5
-}
-
 export default function ProjectsSection() {
-  const visibleProjects = projects.filter((project) => hasDirectRepoLink(project.github))
-  const featuredProjects = visibleProjects.filter((project) => project.featured)
-  const otherProjects = visibleProjects.filter((project) => !project.featured)
+  const featuredProjects = projects.filter((project) => project.featured)
+  const otherProjects = projects.filter((project) => !project.featured)
 
   return (
     <section id="projects" className="section-padding">
@@ -145,11 +135,7 @@ export default function ProjectsSection() {
           </div>
         ) : null}
 
-        {visibleProjects.length === 0 ? (
-          <p className="mt-6 text-center text-sm text-[var(--text-muted)]">
-            Add direct GitHub repository links in project data to display project cards.
-          </p>
-        ) : null}
+
       </div>
     </section>
   )

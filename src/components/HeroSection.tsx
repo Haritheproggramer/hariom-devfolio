@@ -1,5 +1,5 @@
 import type { ReactElement } from 'react'
-import { FaDiscord, FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
+import { FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 import { FiMail } from 'react-icons/fi'
 import { profileData, quickStats, socialLinks } from '../data/portfolioData'
 import Reveal from './Reveal'
@@ -8,7 +8,6 @@ const socialIconMap: Record<string, ReactElement> = {
   LinkedIn: <FaLinkedinIn size={16} />,
   GitHub: <FaGithub size={16} />,
   Instagram: <FaInstagram size={16} />,
-  Discord: <FaDiscord size={16} />,
   Email: <FiMail size={16} />,
 }
 
@@ -21,9 +20,9 @@ export default function HeroSection({ dynamicLine }: HeroSectionProps) {
     <div className="theme-panel relative overflow-hidden rounded-3xl p-3 shadow-[var(--shadow-soft)] transition duration-500 hover:-translate-y-1 hover:border-[color:var(--border-strong)]">
       <div className="absolute -right-14 -top-14 h-36 w-36 rounded-full bg-[var(--accent-soft)] blur-3xl" />
       {profileData.profileImage ? (
-        <img src="/profile.jpg" alt="Hariom Jha" className="h-[20rem] w-full rounded-2xl object-cover object-top sm:h-[22rem]" />
+        <img src="/profile.jpg" alt="Hariom Jha" className="h-[16rem] w-full rounded-2xl object-cover object-top sm:h-[18rem]" />
       ) : (
-        <div className="theme-panel-muted flex h-[20rem] w-full items-center justify-center rounded-2xl text-6xl font-bold text-[var(--accent-ink)] sm:h-[22rem]">
+        <div className="theme-panel-muted flex h-[16rem] w-full items-center justify-center rounded-2xl text-6xl font-bold text-[var(--accent-ink)] sm:h-[18rem]">
           {profileData.initials}
         </div>
       )}
@@ -35,7 +34,7 @@ export default function HeroSection({ dynamicLine }: HeroSectionProps) {
   )
 
   return (
-    <section id="home" className="relative overflow-hidden px-4 pb-14 pt-24 sm:px-6 sm:pb-16 lg:px-8 lg:pt-28">
+    <section id="home" className="relative overflow-hidden px-4 pb-10 pt-20 sm:px-6 sm:pb-12 lg:px-8 lg:pt-24">
       <div className="hero-spotlight pointer-events-none" />
       <div className="mx-auto grid w-full max-w-6xl gap-8 lg:grid-cols-[1.35fr_1fr] lg:items-center lg:gap-12">
         <Reveal>
@@ -51,13 +50,13 @@ export default function HeroSection({ dynamicLine }: HeroSectionProps) {
             Currently building: AI tools, web platforms, and real-world student-focused solutions.
           </p>
 
-          <Reveal className="mx-auto mt-6 w-full max-w-[17rem] lg:hidden" delay={120}>
+          <Reveal className="mx-auto mt-4 w-full max-w-[15rem] lg:hidden" delay={120}>
             {profileCard}
           </Reveal>
 
-          <p className="mt-6 max-w-xl text-[var(--text-secondary)]">{profileData.intro}</p>
+          <p className="mt-5 max-w-xl text-[var(--text-secondary)]">{profileData.intro}</p>
 
-          <div className="mt-6 grid max-w-xl grid-cols-1 gap-3 sm:grid-cols-3">
+          <div className="mt-5 grid max-w-xl grid-cols-1 gap-3 sm:grid-cols-3">
             {quickStats.map((stat) => (
               <div key={stat.label} className="theme-panel-soft rounded-xl px-4 py-3 backdrop-blur-sm">
                 <p className="font-heading text-xl font-semibold text-[var(--accent-ink)]">{stat.value}</p>
@@ -66,7 +65,7 @@ export default function HeroSection({ dynamicLine }: HeroSectionProps) {
             ))}
           </div>
 
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-5 flex flex-wrap gap-3">
             <a href="#projects" className="btn-primary">
               View Projects
             </a>
@@ -75,7 +74,7 @@ export default function HeroSection({ dynamicLine }: HeroSectionProps) {
             </a>
           </div>
 
-          <div className="mt-8 flex items-center gap-3">
+          <div className="mt-5 flex items-center gap-3">
             {socialLinks.map((social) => (
               <a
                 key={social.label}
