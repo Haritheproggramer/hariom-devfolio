@@ -192,19 +192,19 @@ export const academics: AcademicItem[] = [
     degree: 'B.Tech in Computer Science Engineering',
     institution: 'Manav Rachna University, Faridabad',
     year: '2024 - 2028',
-    focus: 'CGPA: 6.69 | Focused on software engineering, AI systems, and product-oriented project development.',
+    focus: 'Focused on software engineering, AI systems, and product-oriented project development.',
   },
   {
     degree: 'Class XII',
     institution: 'G.B.S.S.S New Delhi-110080',
     year: '2023 - 2024',
-    focus: '70% | PCM Stream',
+    focus: 'PCM Stream',
   },
   {
     degree: 'Class X',
     institution: 'G.B.S.S.S New Delhi-110080',
     year: '2021 - 2022',
-    focus: '82% | Foundation for engineering studies',
+    focus: 'Foundation for engineering studies',
   },
 ]
 

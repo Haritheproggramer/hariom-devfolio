@@ -37,7 +37,7 @@ export default function ContactSection() {
                   >
                     <span className="inline-flex items-center gap-2 text-sm">
                       {iconMap[social.label]}
-                      {social.label}
+                      {social.label === 'Email' ? 'jhahariom855@gmail.com' : social.label}
                     </span>
                     <span className="text-xs text-[var(--text-muted)] transition group-hover:text-[var(--accent-ink)]">Open</span>
                   </a>
