@@ -100,7 +100,6 @@ export const projects: Project[] = [
     description:
       'AI-based system for real-time recognition of Bharatiya Natya mudras using computer vision.',
     techStack: ['Python', 'YOLO', 'OpenCV'],
-    github: 'https://github.com/Haritheproggramer',
     featured: true,
   },
   {
@@ -109,7 +108,6 @@ export const projects: Project[] = [
     description:
       'Centralized platform to discover, register, and manage university events.',
     techStack: ['React', 'Firebase', 'Vercel'],
-    github: 'https://github.com/Haritheproggramer',
     liveDemo: 'https://mru-event-hub.vercel.app',
     featured: true,
   },
@@ -128,7 +126,6 @@ export const projects: Project[] = [
     description:
       'Machine learning project to predict bike rental demand using data preprocessing, regression models, and model comparison.',
     techStack: ['Python', 'Pandas', 'Scikit-learn', 'Machine Learning', 'Streamlit'],
-    github: 'https://github.com/Haritheproggramer',
     featured: true,
   },
   {
@@ -137,7 +134,6 @@ export const projects: Project[] = [
     description:
       'AI-powered campus platform that centralizes announcements, timetables, tasks, events, and student updates in one smart dashboard.',
     techStack: ['React', 'Firebase', 'AI Tools', 'Vercel'],
-    github: 'https://github.com/Haritheproggramer',
   },
   {
     title: 'Secure Hybrid Digital Voting',
@@ -145,7 +141,6 @@ export const projects: Project[] = [
     description:
       'Secure digital voting framework focused on end-to-end encryption, kiosk-based inclusivity, and transparent audit workflow.',
     techStack: ['React', 'Cryptography', 'Firebase', 'Security Concepts'],
-    github: 'https://github.com/Haritheproggramer',
   },
   {
     title: 'MEDICLOCK',
@@ -153,7 +148,6 @@ export const projects: Project[] = [
     description:
       'Smart medication reminder system with notifications, tracking, and a user-friendly interface.',
     techStack: ['Flutter', 'Firebase'],
-    github: 'https://github.com/Haritheproggramer',
   },
   {
     title: 'Gaming Arena',
@@ -161,7 +155,6 @@ export const projects: Project[] = [
     description:
       'Python-based mini game arcade including Snake, Pong, and Tic-Tac-Toe with GUI and CLI versions.',
     techStack: ['Python', 'Tkinter'],
-    github: 'https://github.com/Haritheproggramer',
   },
 ]
 
@@ -176,20 +169,20 @@ export const skills: SkillCategory[] = [
   },
   {
     title: 'Tools & Platforms',
-    items: ['Git', 'Firebase', 'Vercel', 'Excel'],
+    items: ['Git', 'GitHub', 'Firebase', 'Vercel'],
   },
   {
     title: 'AI & Tech',
-    items: ['OpenCV', 'Basic ML Concepts', 'AI Tool Utilization'],
+    items: ['OpenCV', 'Scikit-learn', 'TensorFlow', 'Streamlit'],
   },
 ]
 
 export const academics: AcademicItem[] = [
   {
     degree: 'B.Tech in Computer Science Engineering',
-    institution: 'Manav Rachna University',
-    year: '2nd Year',
-    focus: 'Currently building foundations in software engineering, AI, and product development.',
+    institution: 'Manav Rachna University, Faridabad',
+    year: '2024 - 2028',
+    focus: 'Focused on software engineering, AI systems, and product-oriented project development.',
   },
 ]
 
@@ -224,7 +217,6 @@ export const socialLinks: SocialLink[] = [
   { label: 'LinkedIn', url: 'https://www.linkedin.com/in/hariom-jha-039360320' },
   { label: 'GitHub', url: 'https://github.com/Haritheproggramer' },
   { label: 'Instagram', url: 'https://www.instagram.com/hariomxjha029' },
-  { label: 'Discord', url: 'https://discord.gg/rVtct4CX' },
   { label: 'Email', url: 'mailto:jhahariom855@gmail.com' },
 ]
 

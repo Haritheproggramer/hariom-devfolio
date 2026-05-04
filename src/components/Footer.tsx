@@ -1,5 +1,3 @@
-import { socialLinks } from '../data/portfolioData'
-
 export default function Footer() {
   return (
     <footer className="theme-navbar border-t px-4 py-8 sm:px-6 lg:px-8">
@@ -21,19 +19,6 @@ export default function Footer() {
           </a>
         </div>
 
-        <div className="flex gap-2">
-          {socialLinks.map((social) => (
-            <a
-              key={social.label}
-              href={social.url}
-              target={social.label === 'Email' ? undefined : '_blank'}
-              rel={social.label === 'Email' ? undefined : 'noreferrer'}
-              className="theme-chip rounded-full px-3 py-1 text-xs transition hover:border-[color:var(--border-strong)] hover:text-[var(--accent-ink)]"
-            >
-              {social.label}
-            </a>
-          ))}
-        </div>
       </div>
     </footer>
   )

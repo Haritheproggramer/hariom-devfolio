@@ -1,5 +1,5 @@
 import type { ReactElement } from 'react'
-import { FaDiscord, FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
+import { FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 import { FiMail } from 'react-icons/fi'
 import { socialLinks } from '../data/portfolioData'
 import Reveal from './Reveal'
@@ -9,7 +9,6 @@ const iconMap: Record<string, ReactElement> = {
   LinkedIn: <FaLinkedinIn size={16} />,
   GitHub: <FaGithub size={16} />,
   Instagram: <FaInstagram size={16} />,
-  Discord: <FaDiscord size={16} />,
   Email: <FiMail size={16} />,
 }
 
@@ -24,17 +23,10 @@ export default function ContactSection() {
         />
 
         <Reveal>
-          <div className="theme-panel grid gap-4 rounded-3xl p-5 shadow-[var(--shadow-soft)] md:grid-cols-[0.95fr_1.05fr] md:gap-6 md:p-7">
-            <div>
-              <h3 className="font-heading text-2xl font-semibold text-[var(--text-primary)]">Reach Out</h3>
-              <p className="mt-2 max-w-xl text-[var(--text-secondary)]">
-                If you are looking for a motivated student developer for internships, team projects, or hackathons, I would love to connect.
-              </p>
-            </div>
-
+          <div className="theme-panel mx-auto max-w-3xl rounded-3xl p-5 shadow-[var(--shadow-soft)] md:p-6">
             <div className="theme-panel-soft rounded-2xl p-4 md:p-5">
               <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--accent-ink)]">Social Profiles</p>
-              <div className="mt-3 grid gap-2.5">
+              <div className="mt-3 grid gap-2">
                 {socialLinks.map((social) => (
                   <a
                     key={social.label}
