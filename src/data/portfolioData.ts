@@ -243,7 +243,7 @@ export const socialLinks: SocialLink[] = [
 ]
 
 export const quickStats: QuickStat[] = [
-  { label: 'Projects', value: '9+' },
+  { label: 'Projects', value: '7+' },
   { label: 'Hackathon Finalist', value: 'Yes' },
   { label: 'Active Developer', value: 'Always' },
 ]
