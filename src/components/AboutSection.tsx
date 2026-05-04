@@ -12,16 +12,16 @@ export default function AboutSection() {
           description="I’m a 2nd year B.Tech CSE student at Manav Rachna University, passionate about building practical and scalable tech solutions."
         />
 
-        <p className="mx-auto mb-8 max-w-3xl text-center text-slate-300">
+        <p className="mx-auto mb-8 max-w-3xl text-center text-[var(--text-secondary)]">
           I actively participate in hackathons and technical events, where I learn by building, collaborating, and improving my ideas into usable products.
         </p>
 
         <div className="grid gap-5 md:grid-cols-3">
           {aboutCards.map((card, index) => (
             <Reveal key={card.title} delay={index * 90}>
-              <article className="group h-full rounded-2xl border border-white/10 bg-white/5 p-6 transition duration-300 hover:-translate-y-1 hover:border-brand-300/40 hover:bg-white/10 hover:shadow-glow">
-                <h3 className="font-heading text-xl font-semibold text-slate-100">{card.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-slate-300">{card.description}</p>
+              <article className="theme-panel-soft group h-full rounded-2xl p-6 transition duration-300 hover:-translate-y-1 hover:border-[color:var(--border-strong)] hover:shadow-[var(--shadow-soft)]">
+                <h3 className="font-heading text-xl font-semibold text-[var(--text-primary)]">{card.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-[var(--text-secondary)]">{card.description}</p>
               </article>
             </Reveal>
           ))}

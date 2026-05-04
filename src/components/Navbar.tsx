@@ -1,21 +1,23 @@
-import { FiMenu, FiX } from 'react-icons/fi'
+import { FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi'
 import { useState } from 'react'
 import type { NavItem } from '../data/portfolioData'
 
 type NavbarProps = {
   items: NavItem[]
   activeSection: string
+  theme: 'dark' | 'light'
+  onToggleTheme: () => void
 }
 
-export default function Navbar({ items, activeSection }: NavbarProps) {
+export default function Navbar({ items, activeSection, theme, onToggleTheme }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false)
 
   const closeMenu = () => setIsOpen(false)
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink-950/80 backdrop-blur-lg">
-      <nav className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a href="#home" className="font-heading text-lg font-semibold tracking-wide text-slate-100">
+    <header className="theme-navbar fixed inset-x-0 top-0 z-50 border-b backdrop-blur-lg">
+      <nav className="mx-auto flex h-14 w-full max-w-6xl items-center justify-between px-4 sm:h-16 sm:px-6 lg:px-8">
+        <a href="#home" className="font-heading text-base font-semibold tracking-wide text-[var(--text-primary)] sm:text-lg">
           Hariom Jha
         </a>
 
@@ -28,8 +30,8 @@ export default function Navbar({ items, activeSection }: NavbarProps) {
                 href={`#${item.id}`}
                 className={`rounded-full px-4 py-2 text-sm font-medium transition ${
                   isActive
-                    ? 'bg-brand-500/20 text-brand-200 shadow-glow'
-                    : 'text-slate-300 hover:text-slate-100 hover:bg-white/5'
+                    ? 'border border-[color:var(--border-strong)] bg-[var(--accent-soft)] text-[var(--accent-ink)] shadow-[var(--shadow-soft)]'
+                    : 'text-[var(--text-secondary)] hover:bg-[var(--surface-muted)] hover:text-[var(--text-primary)]'
                 }`}
               >
                 {item.label}
@@ -38,17 +40,39 @@ export default function Navbar({ items, activeSection }: NavbarProps) {
           })}
         </div>
 
-        <button
-          className="inline-flex items-center justify-center rounded-lg border border-white/10 p-2 text-slate-200 lg:hidden"
-          onClick={() => setIsOpen((prev) => !prev)}
-          aria-label="Toggle navigation menu"
-        >
-          {isOpen ? <FiX size={20} /> : <FiMenu size={20} />}
-        </button>
+        <div className="hidden items-center gap-2 lg:flex">
+          <button
+            type="button"
+            onClick={onToggleTheme}
+            aria-label="Toggle dark and light mode"
+            className="theme-icon-button"
+          >
+            {theme === 'dark' ? <FiSun size={18} /> : <FiMoon size={18} />}
+          </button>
+        </div>
+
+        <div className="inline-flex items-center gap-2 lg:hidden">
+          <button
+            type="button"
+            onClick={onToggleTheme}
+            aria-label="Toggle dark and light mode"
+            className="theme-icon-button"
+          >
+            {theme === 'dark' ? <FiSun size={17} /> : <FiMoon size={17} />}
+          </button>
+          <button
+            className="theme-icon-button"
+            onClick={() => setIsOpen((prev) => !prev)}
+            aria-label="Toggle navigation menu"
+            type="button"
+          >
+            {isOpen ? <FiX size={20} /> : <FiMenu size={20} />}
+          </button>
+        </div>
       </nav>
 
       {isOpen && (
-        <div className="border-t border-white/10 bg-ink-950/95 px-4 py-4 lg:hidden">
+        <div className="theme-mobile-menu border-t px-4 py-3 lg:hidden">
           <div className="flex flex-col gap-2">
             {items.map((item) => (
               <a
@@ -57,8 +81,8 @@ export default function Navbar({ items, activeSection }: NavbarProps) {
                 onClick={closeMenu}
                 className={`rounded-lg px-3 py-2 text-sm font-medium transition ${
                   activeSection === item.id
-                    ? 'bg-brand-500/20 text-brand-200'
-                    : 'text-slate-300 hover:bg-white/5 hover:text-slate-100'
+                    ? 'border border-[color:var(--border-strong)] bg-[var(--accent-soft)] text-[var(--accent-ink)]'
+                    : 'text-[var(--text-secondary)] hover:bg-[var(--surface-muted)] hover:text-[var(--text-primary)]'
                 }`}
               >
                 {item.label}

@@ -15,17 +15,17 @@ export default function AcademicsSection() {
         <div className="space-y-4">
           {academics.map((item, index) => (
             <Reveal key={item.degree} delay={index * 90}>
-              <article className="rounded-2xl border border-white/10 bg-white/5 p-6 transition duration-300 hover:border-brand-300/40 hover:bg-white/10">
+              <article className="theme-panel-soft rounded-2xl p-6 transition duration-300 hover:border-[color:var(--border-strong)]">
                 <div className="flex flex-wrap items-start justify-between gap-3">
                   <div>
-                    <h3 className="font-heading text-xl font-semibold text-slate-100">{item.degree}</h3>
-                    <p className="text-slate-300">{item.institution}</p>
+                    <h3 className="font-heading text-xl font-semibold text-[var(--text-primary)]">{item.degree}</h3>
+                    <p className="text-[var(--text-secondary)]">{item.institution}</p>
                   </div>
-                  <span className="rounded-full border border-brand-300/30 bg-brand-500/10 px-3 py-1 text-xs font-semibold text-brand-100">
+                  <span className="theme-badge rounded-full px-3 py-1 text-xs font-semibold">
                     {item.year}
                   </span>
                 </div>
-                <p className="mt-3 text-sm text-slate-300">{item.focus}</p>
+                <p className="mt-3 text-sm text-[var(--text-secondary)]">{item.focus}</p>
               </article>
             </Reveal>
           ))}

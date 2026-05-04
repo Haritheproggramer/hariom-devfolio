@@ -24,18 +24,18 @@ export default function SkillsSection() {
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {skills.map((category, categoryIndex) => (
             <Reveal key={category.title} delay={categoryIndex * 70}>
-              <article className="h-full rounded-2xl border border-white/10 bg-white/5 p-5 transition duration-300 hover:-translate-y-1 hover:border-brand-300/40 hover:shadow-glow">
+              <article className="theme-panel-soft h-full rounded-2xl p-5 transition duration-300 hover:-translate-y-1 hover:border-[color:var(--border-strong)] hover:shadow-[var(--shadow-soft)]">
                 <div className="flex items-center gap-3">
-                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-brand-300/30 bg-brand-500/10 text-brand-100">
+                  <span className="theme-badge inline-flex h-10 w-10 items-center justify-center rounded-xl">
                     {skillIcons[category.title]}
                   </span>
-                  <h3 className="font-heading text-lg font-semibold text-slate-100">{category.title}</h3>
+                  <h3 className="font-heading text-lg font-semibold text-[var(--text-primary)]">{category.title}</h3>
                 </div>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {category.items.map((skill) => (
                     <span
                       key={skill}
-                      className="rounded-full border border-white/15 bg-slate-950/60 px-3 py-1 text-xs text-slate-200 transition hover:border-brand-300/40 hover:text-brand-100"
+                      className="theme-chip rounded-full px-3 py-1 text-xs transition"
                     >
                       {skill}
                     </span>

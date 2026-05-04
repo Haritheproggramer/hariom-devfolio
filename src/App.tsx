@@ -10,12 +10,16 @@ import Navbar from './components/Navbar'
 import ProjectsSection from './components/ProjectsSection'
 import ScrollTopButton from './components/ScrollTopButton'
 import SkillsSection from './components/SkillsSection'
+import CustomCursor from './components/CustomCursor'
 import { navItems, profileData } from './data/portfolioData'
+
+type ThemeMode = 'dark' | 'light'
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('home')
   const [showTopButton, setShowTopButton] = useState(false)
   const [lineIndex, setLineIndex] = useState(0)
+  const [theme, setTheme] = useState<ThemeMode>('dark')
 
   const dynamicLine = useMemo(
     () => profileData.rotatingLines[lineIndex % profileData.rotatingLines.length],
@@ -29,6 +33,17 @@ export default function App() {
 
     return () => window.clearInterval(interval)
   }, [])
+
+  useEffect(() => {
+    const savedTheme = window.localStorage.getItem('portfolio-theme')
+    const initialTheme: ThemeMode = savedTheme === 'light' ? 'light' : 'dark'
+    setTheme(initialTheme)
+  }, [])
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('light', theme === 'light')
+    window.localStorage.setItem('portfolio-theme', theme)
+  }, [theme])
 
   useEffect(() => {
     const sections = navItems
@@ -62,10 +77,15 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const handleThemeToggle = () => {
+    setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))
+  }
+
   return (
-    <div className="min-h-screen bg-ink-950 text-slate-100 selection:bg-brand-500/40 selection:text-white">
+    <div className="theme-root min-h-screen selection:bg-brand-500/40 selection:text-white">
       <AmbientBackground />
-      <Navbar items={navItems} activeSection={activeSection} />
+      <CustomCursor />
+      <Navbar items={navItems} activeSection={activeSection} theme={theme} onToggleTheme={handleThemeToggle} />
       <main>
         <HeroSection dynamicLine={dynamicLine} />
         <AboutSection />

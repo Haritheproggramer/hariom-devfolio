@@ -8,8 +8,9 @@ export type Project = {
   category: string
   description: string
   techStack: string[]
-  github: string
+  github?: string
   liveDemo?: string
+  featured?: boolean
 }
 
 export type SkillCategory = {
@@ -94,20 +95,13 @@ export const aboutCards = [
 
 export const projects: Project[] = [
   {
-    title: 'AcadTrack',
-    category: 'Student Productivity App',
-    description:
-      'Modern Flutter + Supabase platform for task management, reminders, faculty notices, and progress tracking with RAG-based assistance; built in collaboration with my friend.',
-    techStack: ['Flutter', 'Dart', 'Supabase', 'Postgres', 'RAG'],
-    github: 'https://github.com/Haritheproggramer/AcadTrack',
-  },
-  {
     title: 'MudraSense',
     category: 'SIH Project',
     description:
       'AI-based system for real-time recognition of Bharatiya Natya mudras using computer vision.',
     techStack: ['Python', 'YOLO', 'OpenCV'],
     github: 'https://github.com/Haritheproggramer',
+    featured: true,
   },
   {
     title: 'MRU Event Hub',
@@ -117,6 +111,41 @@ export const projects: Project[] = [
     techStack: ['React', 'Firebase', 'Vercel'],
     github: 'https://github.com/Haritheproggramer',
     liveDemo: 'https://mru-event-hub.vercel.app',
+    featured: true,
+  },
+  {
+    title: 'AcadTrack',
+    category: 'Student Productivity App',
+    description:
+      'Modern Flutter + Supabase platform for student task management, reminders, faculty notices, document handling, and progress tracking.',
+    techStack: ['Flutter', 'Dart', 'Supabase', 'Postgres'],
+    github: 'https://github.com/Haritheproggramer/AcadTrack',
+    featured: true,
+  },
+  {
+    title: 'Yulu Bike Demand Prediction',
+    category: 'Machine Learning Project',
+    description:
+      'Machine learning project to predict bike rental demand using data preprocessing, regression models, and model comparison.',
+    techStack: ['Python', 'Pandas', 'Scikit-learn', 'Machine Learning', 'Streamlit'],
+    github: 'https://github.com/Haritheproggramer',
+    featured: true,
+  },
+  {
+    title: 'Campus Connect',
+    category: 'Campus SaaS Platform',
+    description:
+      'AI-powered campus platform that centralizes announcements, timetables, tasks, events, and student updates in one smart dashboard.',
+    techStack: ['React', 'Firebase', 'AI Tools', 'Vercel'],
+    github: 'https://github.com/Haritheproggramer',
+  },
+  {
+    title: 'Secure Hybrid Digital Voting',
+    category: 'Security / Hackathon Project',
+    description:
+      'Secure digital voting framework focused on end-to-end encryption, kiosk-based inclusivity, and transparent audit workflow.',
+    techStack: ['React', 'Cryptography', 'Firebase', 'Security Concepts'],
+    github: 'https://github.com/Haritheproggramer',
   },
   {
     title: 'MEDICLOCK',
@@ -128,10 +157,10 @@ export const projects: Project[] = [
   },
   {
     title: 'Gaming Arena',
-    category: 'Game Suite',
+    category: 'Python Mini Game Arcade',
     description:
-      'Mini arcade system including Snake, Pong, and Tic-Tac-Toe with GUI and CLI versions.',
-    techStack: ['Flutter', 'Firebase'],
+      'Python-based mini game arcade including Snake, Pong, and Tic-Tac-Toe with GUI and CLI versions.',
+    techStack: ['Python', 'Tkinter'],
     github: 'https://github.com/Haritheproggramer',
   },
 ]
@@ -195,11 +224,12 @@ export const socialLinks: SocialLink[] = [
   { label: 'LinkedIn', url: 'https://www.linkedin.com/in/hariom-jha-039360320' },
   { label: 'GitHub', url: 'https://github.com/Haritheproggramer' },
   { label: 'Instagram', url: 'https://www.instagram.com/hariomxjha029' },
+  { label: 'Discord', url: 'https://discord.gg/rVtct4CX' },
   { label: 'Email', url: 'mailto:jhahariom855@gmail.com' },
 ]
 
 export const quickStats: QuickStat[] = [
-  { label: 'Projects', value: '5+' },
+  { label: 'Projects', value: '9+' },
   { label: 'Hackathon Finalist', value: 'Yes' },
   { label: 'Active Developer', value: 'Always' },
 ]

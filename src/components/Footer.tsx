@@ -2,21 +2,21 @@ import { socialLinks } from '../data/portfolioData'
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-ink-950/80 px-4 py-8 sm:px-6 lg:px-8">
+    <footer className="theme-navbar border-t px-4 py-8 sm:px-6 lg:px-8">
       <div className="mx-auto flex w-full max-w-6xl flex-col items-start justify-between gap-5 sm:flex-row sm:items-center">
         <div>
-          <p className="font-heading text-lg font-semibold text-slate-100">Hariom Jha</p>
-          <p className="text-sm text-slate-400">© {new Date().getFullYear()} All rights reserved.</p>
+          <p className="font-heading text-lg font-semibold text-[var(--text-primary)]">Hariom Jha</p>
+          <p className="text-sm text-[var(--text-muted)]">© {new Date().getFullYear()} All rights reserved.</p>
         </div>
 
-        <div className="flex flex-wrap gap-3 text-sm text-slate-300">
-          <a href="#home" className="hover:text-brand-200">
+        <div className="flex flex-wrap gap-3 text-sm text-[var(--text-secondary)]">
+          <a href="#home" className="hover:text-[var(--accent-ink)]">
             Home
           </a>
-          <a href="#projects" className="hover:text-brand-200">
+          <a href="#projects" className="hover:text-[var(--accent-ink)]">
             Projects
           </a>
-          <a href="#contact" className="hover:text-brand-200">
+          <a href="#contact" className="hover:text-[var(--accent-ink)]">
             Contact
           </a>
         </div>
@@ -26,9 +26,9 @@ export default function Footer() {
             <a
               key={social.label}
               href={social.url}
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full border border-white/15 px-3 py-1 text-xs text-slate-300 transition hover:border-brand-300/50 hover:text-brand-100"
+              target={social.label === 'Email' ? undefined : '_blank'}
+              rel={social.label === 'Email' ? undefined : 'noreferrer'}
+              className="theme-chip rounded-full px-3 py-1 text-xs transition hover:border-[color:var(--border-strong)] hover:text-[var(--accent-ink)]"
             >
               {social.label}
             </a>
