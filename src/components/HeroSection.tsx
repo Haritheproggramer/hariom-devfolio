@@ -50,11 +50,11 @@ export default function HeroSection({ dynamicLine }: HeroSectionProps) {
             Currently building: AI tools, web platforms, and real-world student-focused solutions.
           </p>
 
-          <Reveal className="mx-auto mt-4 w-full max-w-[15rem] lg:hidden" delay={120}>
+          <Reveal className="mx-auto mt-4 w-full max-w-[18rem] sm:max-w-[20rem] lg:hidden" delay={120}>
             {profileCard}
           </Reveal>
 
-          <p className="mt-5 max-w-xl text-[var(--text-secondary)]">{profileData.intro}</p>
+          <p className="mt-4 hidden max-w-xl text-sm text-[var(--text-secondary)] sm:block">{profileData.intro}</p>
 
           <div className="mt-5 grid max-w-xl grid-cols-1 gap-3 sm:grid-cols-3">
             {quickStats.map((stat) => (
