@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import type { IconType } from 'react-icons'
+import { FaFileExcel } from 'react-icons/fa6'
+import { FiMousePointer } from 'react-icons/fi'
 import {
   SiCss,
   SiFirebase,
@@ -8,8 +10,12 @@ import {
   SiGit,
   SiGithub,
   SiHtml5,
+  SiGithubcopilot,
+  SiGooglegemini,
+  SiOpenai,
   SiOpenjdk,
   SiOpencv,
+  SiPerplexity,
   SiPython,
   SiReact,
   SiScikitlearn,
@@ -41,12 +47,18 @@ const skillIconMap: Record<string, IconType> = {
   GitHub: SiGithub,
   Firebase: SiFirebase,
   Vercel: SiVercel,
+  Excel: FaFileExcel,
   Flutter: SiFlutter,
   OpenCV: SiOpencv,
   Supabase: SiSupabase,
   'Scikit-learn': SiScikitlearn,
   TensorFlow: SiTensorflow,
   Streamlit: SiStreamlit,
+  'GitHub Copilot': SiGithubcopilot,
+  'Google Gemini': SiGooglegemini,
+  ChatGPT: SiOpenai,
+  Cursor: FiMousePointer,
+  Perplexity: SiPerplexity,
 }
 
 export default function HomePage() {
@@ -66,7 +78,6 @@ export default function HomePage() {
   }, [])
 
   const featuredProjects = projects.filter((project) => project.featured).slice(0, 3)
-  const previewSkills = skills.flatMap((category) => category.items).slice(0, 10)
   const achievementBadges = achievements.slice(0, 4)
 
   return (
@@ -132,23 +143,30 @@ export default function HomePage() {
         <div className="mx-auto w-full max-w-6xl">
           <SectionHeader
             eyebrow="Skills"
-            title="Technical Preview"
-            description="A compact view of the tools and platforms used across the portfolio."
+            title="Technical Stack"
+            description="A compact, categorized view of the tools and platforms used across the portfolio."
           />
 
-          <div className="flex flex-wrap justify-center gap-2">
-            {previewSkills.map((skill) => {
-              const Icon = skillIconMap[skill]
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {skills.map((category, index) => (
+              <Reveal key={category.title} delay={index * 80}>
+                <article className="theme-panel-soft h-full rounded-2xl p-5 transition duration-300 hover:-translate-y-1 hover:border-[color:var(--border-strong)] hover:shadow-[var(--shadow-soft)]">
+                  <h3 className="font-heading text-lg font-semibold text-[var(--text-primary)]">{category.title}</h3>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {category.items.map((skill) => {
+                      const Icon = skillIconMap[skill]
 
-              return (
-                <Reveal key={skill} delay={0}>
-                  <span className="theme-chip inline-flex items-center gap-2 rounded-full px-3 py-2 text-xs font-medium">
-                    {Icon ? <Icon size={13} /> : null}
-                    {skill}
-                  </span>
-                </Reveal>
-              )
-            })}
+                      return (
+                        <span key={skill} className="theme-chip inline-flex items-center gap-2 rounded-full px-3 py-2 text-xs font-medium">
+                          {Icon ? <Icon size={13} /> : null}
+                          {skill}
+                        </span>
+                      )
+                    })}
+                  </div>
+                </article>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>

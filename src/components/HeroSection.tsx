@@ -21,7 +21,13 @@ export default function HeroSection({ dynamicLine }: HeroSectionProps) {
     <div className="theme-panel relative overflow-hidden rounded-3xl p-3 shadow-[var(--shadow-soft)] transition duration-500 hover:-translate-y-1 hover:border-[color:var(--border-strong)]">
       <div className="absolute -right-14 -top-14 h-36 w-36 rounded-full bg-[var(--accent-soft)] blur-3xl" />
       {profileData.profileImage ? (
-        <img src="/profile.jpg" alt="Hariom Jha" className="w-full rounded-2xl object-contain" />
+        <div className="overflow-hidden rounded-2xl bg-[var(--surface-muted)]">
+          <img
+            src="/profile.jpg"
+            alt="Hariom Jha"
+            className="aspect-[4/5] h-full w-full object-cover object-center"
+          />
+        </div>
       ) : (
         <div className="theme-panel-muted flex h-[16rem] w-full items-center justify-center rounded-2xl text-6xl font-bold text-[var(--accent-ink)] sm:h-[18rem]">
           {profileData.initials}

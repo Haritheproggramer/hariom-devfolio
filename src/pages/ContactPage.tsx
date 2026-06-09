@@ -26,7 +26,7 @@ export default function ContactPage() {
           />
 
           <p className="mx-auto -mt-4 max-w-3xl text-center text-sm leading-relaxed text-[var(--text-secondary)] sm:text-base">
-            If you want to collaborate on a product, discuss a role, or simply compare ideas, these are the best ways to reach me.
+            Open to internships, collaborations, and exciting opportunities.
           </p>
 
           <div className="mx-auto mt-8 max-w-3xl">

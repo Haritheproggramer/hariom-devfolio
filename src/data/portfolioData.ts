@@ -182,11 +182,15 @@ export const skills: SkillCategory[] = [
   },
   {
     title: 'Tools & Platforms',
-    items: ['Git', 'GitHub', 'Firebase', 'Vercel'],
+    items: ['Git', 'GitHub', 'Firebase', 'Vercel', 'Excel'],
   },
   {
-    title: 'AI & Tech',
+    title: 'AI & ML',
     items: ['OpenCV', 'Scikit-learn', 'TensorFlow', 'Streamlit'],
+  },
+  {
+    title: 'AI Tools',
+    items: ['GitHub Copilot', 'Google Gemini', 'ChatGPT', 'Cursor', 'Perplexity'],
   },
 ]
 
@@ -249,7 +253,7 @@ export const contactChannels: ContactChannel[] = [
   { label: 'LinkedIn', url: 'https://www.linkedin.com/in/hariom-jha-039360320' },
   { label: 'GitHub', url: 'https://github.com/Haritheproggramer' },
   { label: 'Instagram', url: 'https://www.instagram.com/hariomxjha029' },
-  { label: 'Discord', note: 'Available on request' },
+  { label: 'Discord', url: 'https://discord.gg/rVtct4CX' },
   { label: 'Email', url: 'mailto:jhahariom855@gmail.com' },
 ]
 
