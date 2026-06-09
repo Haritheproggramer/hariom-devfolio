@@ -1,41 +1,44 @@
 import { FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi'
+import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
 import type { NavItem } from '../data/portfolioData'
 
 type NavbarProps = {
   items: NavItem[]
-  activeSection: string
   theme: 'dark' | 'light'
   onToggleTheme: () => void
 }
 
-export default function Navbar({ items, activeSection, theme, onToggleTheme }: NavbarProps) {
+export default function Navbar({ items, theme, onToggleTheme }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false)
 
   const closeMenu = () => setIsOpen(false)
 
+  const getLinkClassName = (isActive: boolean) =>
+    `rounded-full px-4 py-2 text-sm font-medium transition ${
+      isActive
+        ? 'border border-[color:var(--border-strong)] bg-[var(--accent-soft)] text-[var(--accent-ink)] shadow-[var(--shadow-soft)]'
+        : 'text-[var(--text-secondary)] hover:bg-[var(--surface-muted)] hover:text-[var(--text-primary)]'
+    }`
+
   return (
     <header className="theme-navbar fixed inset-x-0 top-0 z-50 border-b backdrop-blur-lg">
       <nav className="mx-auto flex h-14 w-full max-w-6xl items-center justify-between px-4 sm:h-16 sm:px-6 lg:px-8">
-        <a href="#home" className="font-heading text-base font-semibold tracking-wide text-[var(--text-primary)] sm:text-lg">
+        <NavLink to="/" end className="font-heading text-base font-semibold tracking-wide text-[var(--text-primary)] sm:text-lg">
           Hariom Jha
-        </a>
+        </NavLink>
 
         <div className="hidden items-center gap-2 lg:flex">
           {items.map((item) => {
-            const isActive = activeSection === item.id
             return (
-              <a
-                key={item.id}
-                href={`#${item.id}`}
-                className={`rounded-full px-4 py-2 text-sm font-medium transition ${
-                  isActive
-                    ? 'border border-[color:var(--border-strong)] bg-[var(--accent-soft)] text-[var(--accent-ink)] shadow-[var(--shadow-soft)]'
-                    : 'text-[var(--text-secondary)] hover:bg-[var(--surface-muted)] hover:text-[var(--text-primary)]'
-                }`}
+              <NavLink
+                key={item.path}
+                to={item.path}
+                end={item.path === '/'}
+                className={({ isActive }: { isActive: boolean }) => getLinkClassName(isActive)}
               >
                 {item.label}
-              </a>
+              </NavLink>
             )
           })}
         </div>
@@ -75,18 +78,21 @@ export default function Navbar({ items, activeSection, theme, onToggleTheme }: N
         <div className="theme-mobile-menu border-t px-4 py-3 lg:hidden">
           <div className="flex flex-col gap-2">
             {items.map((item) => (
-              <a
-                key={item.id}
-                href={`#${item.id}`}
+              <NavLink
+                key={item.path}
+                to={item.path}
+                end={item.path === '/'}
                 onClick={closeMenu}
-                className={`rounded-lg px-3 py-2 text-sm font-medium transition ${
-                  activeSection === item.id
-                    ? 'border border-[color:var(--border-strong)] bg-[var(--accent-soft)] text-[var(--accent-ink)]'
-                    : 'text-[var(--text-secondary)] hover:bg-[var(--surface-muted)] hover:text-[var(--text-primary)]'
-                }`}
+                className={({ isActive }: { isActive: boolean }) =>
+                  `rounded-lg px-3 py-2 text-sm font-medium transition ${
+                    isActive
+                      ? 'border border-[color:var(--border-strong)] bg-[var(--accent-soft)] text-[var(--accent-ink)]'
+                      : 'text-[var(--text-secondary)] hover:bg-[var(--surface-muted)] hover:text-[var(--text-primary)]'
+                  }`
+                }
               >
                 {item.label}
-              </a>
+              </NavLink>
             ))}
           </div>
         </div>

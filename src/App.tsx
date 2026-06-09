@@ -1,38 +1,31 @@
-import { useEffect, useMemo, useState } from 'react'
-import AboutSection from './components/AboutSection'
-import AcademicsSection from './components/AcademicsSection'
+import { useEffect, useState } from 'react'
 import AmbientBackground from './components/AmbientBackground'
-import AchievementsSection from './components/AchievementsSection'
-import ContactSection from './components/ContactSection'
 import Footer from './components/Footer'
-import HeroSection from './components/HeroSection'
 import Navbar from './components/Navbar'
-import ProjectsSection from './components/ProjectsSection'
 import ScrollTopButton from './components/ScrollTopButton'
-import SkillsSection from './components/SkillsSection'
 import CustomCursor from './components/CustomCursor'
-import { navItems, profileData } from './data/portfolioData'
+import { navItems } from './data/portfolioData'
+import ContactPage from './pages/ContactPage'
+import HomePage from './pages/HomePage'
+import JourneyPage from './pages/JourneyPage'
+import ProjectsPage from './pages/ProjectsPage'
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 
 type ThemeMode = 'dark' | 'light'
 
-export default function App() {
-  const [activeSection, setActiveSection] = useState('home')
-  const [showTopButton, setShowTopButton] = useState(false)
-  const [lineIndex, setLineIndex] = useState(0)
-  const [theme, setTheme] = useState<ThemeMode>('dark')
-
-  const dynamicLine = useMemo(
-    () => profileData.rotatingLines[lineIndex % profileData.rotatingLines.length],
-    [lineIndex],
-  )
+function RouteScrollToTop() {
+  const { pathname } = useLocation()
 
   useEffect(() => {
-    const interval = window.setInterval(() => {
-      setLineIndex((prev) => prev + 1)
-    }, 2600)
+    window.scrollTo({ top: 0, left: 0 })
+  }, [pathname])
 
-    return () => window.clearInterval(interval)
-  }, [])
+  return null
+}
+
+export default function App() {
+  const [showTopButton, setShowTopButton] = useState(false)
+  const [theme, setTheme] = useState<ThemeMode>('dark')
 
   useEffect(() => {
     const savedTheme = window.localStorage.getItem('portfolio-theme')
@@ -44,31 +37,6 @@ export default function App() {
     document.documentElement.classList.toggle('light', theme === 'light')
     window.localStorage.setItem('portfolio-theme', theme)
   }, [theme])
-
-  useEffect(() => {
-    const sections = navItems
-      .map((item) => document.getElementById(item.id))
-      .filter(Boolean) as HTMLElement[]
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)
-
-        if (visible.length > 0) {
-          setActiveSection(visible[0].target.id)
-        }
-      },
-      {
-        threshold: [0.2, 0.4, 0.6],
-        rootMargin: '-20% 0px -55% 0px',
-      },
-    )
-
-    sections.forEach((section) => observer.observe(section))
-    return () => observer.disconnect()
-  }, [])
 
   useEffect(() => {
     const handleScroll = () => setShowTopButton(window.scrollY > 420)
@@ -85,15 +53,16 @@ export default function App() {
     <div className="theme-root min-h-screen selection:bg-brand-500/40 selection:text-white">
       <AmbientBackground />
       <CustomCursor />
-      <Navbar items={navItems} activeSection={activeSection} theme={theme} onToggleTheme={handleThemeToggle} />
+      <Navbar items={navItems} theme={theme} onToggleTheme={handleThemeToggle} />
+      <RouteScrollToTop />
       <main>
-        <HeroSection dynamicLine={dynamicLine} />
-        <AboutSection />
-        <ProjectsSection />
-        <SkillsSection />
-        <AcademicsSection />
-        <AchievementsSection />
-        <ContactSection />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/journey" element={<JourneyPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
       </main>
       <Footer />
       <ScrollTopButton isVisible={showTopButton} />

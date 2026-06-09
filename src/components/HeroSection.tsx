@@ -1,6 +1,7 @@
 import type { ReactElement } from 'react'
 import { FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 import { FiMail } from 'react-icons/fi'
+import { Link } from 'react-router-dom'
 import { profileData, quickStats, socialLinks } from '../data/portfolioData'
 import Reveal from './Reveal'
 
@@ -66,12 +67,12 @@ export default function HeroSection({ dynamicLine }: HeroSectionProps) {
           </div>
 
           <div className="mt-5 flex flex-wrap gap-3">
-            <a href="#projects" className="btn-primary">
+            <Link to="/projects" className="btn-primary">
               View Projects
-            </a>
-            <a href="#contact" className="btn-secondary">
+            </Link>
+            <Link to="/contact" className="btn-secondary">
               Contact
-            </a>
+            </Link>
           </div>
 
           <div className="mt-5 flex items-center gap-3">

@@ -8,13 +8,16 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-wrap gap-3 text-sm text-[var(--text-secondary)]">
-          <a href="#home" className="hover:text-[var(--accent-ink)]">
+          <a href="/" className="hover:text-[var(--accent-ink)]">
             Home
           </a>
-          <a href="#projects" className="hover:text-[var(--accent-ink)]">
+          <a href="/projects" className="hover:text-[var(--accent-ink)]">
             Projects
           </a>
-          <a href="#contact" className="hover:text-[var(--accent-ink)]">
+          <a href="/journey" className="hover:text-[var(--accent-ink)]">
+            Journey
+          </a>
+          <a href="/contact" className="hover:text-[var(--accent-ink)]">
             Contact
           </a>
         </div>

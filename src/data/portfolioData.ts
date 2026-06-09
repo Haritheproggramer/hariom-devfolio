@@ -1,5 +1,5 @@
 export type NavItem = {
-  id: string
+  path: string
   label: string
 }
 
@@ -37,6 +37,12 @@ export type SocialLink = {
   url: string
 }
 
+export type ContactChannel = {
+  label: string
+  url?: string
+  note?: string
+}
+
 export type QuickStat = {
   label: string
   value: string
@@ -50,13 +56,10 @@ export type MilestoneItem = {
 }
 
 export const navItems: NavItem[] = [
-  { id: 'home', label: 'Home' },
-  { id: 'about', label: 'About' },
-  { id: 'projects', label: 'Projects' },
-  { id: 'skills', label: 'Skills' },
-  { id: 'education', label: 'Education' },
-  { id: 'achievements', label: 'Achievements' },
-  { id: 'contact', label: 'Contact' },
+  { path: '/', label: 'Home' },
+  { path: '/projects', label: 'Projects' },
+  { path: '/journey', label: 'Journey' },
+  { path: '/contact', label: 'Contact' },
 ]
 
 export const profileData = {
@@ -239,6 +242,14 @@ export const socialLinks: SocialLink[] = [
   { label: 'LinkedIn', url: 'https://www.linkedin.com/in/hariom-jha-039360320' },
   { label: 'GitHub', url: 'https://github.com/Haritheproggramer' },
   { label: 'Instagram', url: 'https://www.instagram.com/hariomxjha029' },
+  { label: 'Email', url: 'mailto:jhahariom855@gmail.com' },
+]
+
+export const contactChannels: ContactChannel[] = [
+  { label: 'LinkedIn', url: 'https://www.linkedin.com/in/hariom-jha-039360320' },
+  { label: 'GitHub', url: 'https://github.com/Haritheproggramer' },
+  { label: 'Instagram', url: 'https://www.instagram.com/hariomxjha029' },
+  { label: 'Discord', note: 'Available on request' },
   { label: 'Email', url: 'mailto:jhahariom855@gmail.com' },
 ]
 
